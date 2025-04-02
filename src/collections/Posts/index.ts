@@ -73,6 +73,10 @@ export const Posts: CollectionConfig<'posts'> = {
       name: 'title',
       type: 'text',
       required: true,
+      label: {
+        en: 'Title',
+        es: 'Título',
+      },
     },
     {
       type: 'tabs',
@@ -83,6 +87,10 @@ export const Posts: CollectionConfig<'posts'> = {
               name: 'heroImage',
               type: 'upload',
               relationTo: 'media',
+              label: {
+                en: 'Hero Image',
+                es: 'Imagen Principal',
+              },
             },
             {
               name: 'content',
@@ -103,7 +111,10 @@ export const Posts: CollectionConfig<'posts'> = {
               required: true,
             },
           ],
-          label: 'Content',
+          label: {
+            en: 'Content',
+            es: 'Contenido',
+          },
         },
         {
           fields: [
@@ -122,6 +133,10 @@ export const Posts: CollectionConfig<'posts'> = {
               },
               hasMany: true,
               relationTo: 'posts',
+              label: {
+                en: 'Related Posts',
+                es: 'Publicaciones Relacionadas',
+              },
             },
             {
               name: 'categories',
@@ -131,6 +146,10 @@ export const Posts: CollectionConfig<'posts'> = {
               },
               hasMany: true,
               relationTo: 'categories',
+              label: {
+                en: 'Categories',
+                es: 'Categorías',
+              },
             },
           ],
           label: 'Meta',
@@ -183,6 +202,10 @@ export const Posts: CollectionConfig<'posts'> = {
           },
         ],
       },
+      label: {
+        en: 'Published At',
+        es: 'Publicado En',
+      },
     },
     {
       name: 'authors',
@@ -192,6 +215,10 @@ export const Posts: CollectionConfig<'posts'> = {
       },
       hasMany: true,
       relationTo: 'users',
+      label: {
+        en: 'Authors',
+        es: 'Autores',
+      },
     },
     // This field is only used to populate the user data via the `populateAuthors` hook
     // This is because the `user` collection has access control locked to protect user privacy
@@ -232,5 +259,15 @@ export const Posts: CollectionConfig<'posts'> = {
       schedulePublish: true,
     },
     maxPerDoc: 50,
+  },
+  labels: {
+    singular: {
+      en: 'Post',
+      es: 'Publicación',
+    },
+    plural: {
+      en: 'Posts',
+      es: 'Publicaciones',
+    },
   },
 }

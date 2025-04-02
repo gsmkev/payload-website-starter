@@ -62,6 +62,10 @@ export const Pages: CollectionConfig<'pages'> = {
       name: 'title',
       type: 'text',
       required: true,
+      label: {
+        en: 'Title',
+        es: 'Título',
+      },
     },
     {
       type: 'tabs',
@@ -82,7 +86,10 @@ export const Pages: CollectionConfig<'pages'> = {
               },
             },
           ],
-          label: 'Content',
+          label: {
+            en: 'Content',
+            es: 'Contenido',
+          },
         },
         {
           name: 'meta',
@@ -115,6 +122,10 @@ export const Pages: CollectionConfig<'pages'> = {
     },
     {
       name: 'publishedAt',
+      label: {
+        en: 'Published At',
+        es: 'Publicado el',
+      },
       type: 'date',
       admin: {
         position: 'sidebar',
@@ -135,5 +146,15 @@ export const Pages: CollectionConfig<'pages'> = {
       schedulePublish: true,
     },
     maxPerDoc: 50,
+  },
+  labels: {
+    singular: {
+      en: 'Page',
+      es: 'Página',
+    },
+    plural: {
+      en: 'Pages',
+      es: 'Páginas',
+    },
   },
 }

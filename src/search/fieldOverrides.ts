@@ -8,6 +8,10 @@ export const searchFields: Field[] = [
     admin: {
       readOnly: true,
     },
+    label: {
+      en: 'Slug',
+      es: 'Ruta',
+    },
   },
   {
     name: 'meta',
@@ -21,23 +25,35 @@ export const searchFields: Field[] = [
       {
         type: 'text',
         name: 'title',
-        label: 'Title',
+        label: {
+          en: 'Title',
+          es: 'Título',
+        },
       },
       {
         type: 'text',
         name: 'description',
-        label: 'Description',
+        label: {
+          en: 'Description',
+          es: 'Descripción',
+        },
       },
       {
         name: 'image',
-        label: 'Image',
+        label: {
+          en: 'Image',
+          es: 'Imagen',
+        },
         type: 'upload',
         relationTo: 'media',
       },
     ],
   },
   {
-    label: 'Categories',
+    label: {
+      en: 'Categories',
+      es: 'Categorías',
+    },
     name: 'categories',
     type: 'array',
     admin: {
@@ -47,14 +63,26 @@ export const searchFields: Field[] = [
       {
         name: 'relationTo',
         type: 'text',
+        label: {
+          en: 'Relation To',
+          es: 'Relación a',
+        },
       },
       {
         name: 'id',
         type: 'text',
+        label: {
+          en: 'ID',
+          es: 'ID',
+        },
       },
       {
         name: 'title',
         type: 'text',
+        label: {
+          en: 'Title',
+          es: 'Título',
+        },
       },
     ],
   },

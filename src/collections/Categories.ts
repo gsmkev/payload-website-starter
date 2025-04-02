@@ -20,7 +20,21 @@ export const Categories: CollectionConfig = {
       name: 'title',
       type: 'text',
       required: true,
+      label: {
+        en: 'Title',
+        es: 'Título',
+      },
     },
     ...slugField(),
   ],
+  labels: {
+    singular: {
+      en: 'Category',
+      es: 'Categoría',
+    },
+    plural: {
+      en: 'Categories',
+      es: 'Categorías',
+    },
+  },
 }

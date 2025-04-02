@@ -26,11 +26,19 @@ export const Media: CollectionConfig = {
     {
       name: 'alt',
       type: 'text',
+      label: {
+        en: 'Alt Text',
+        es: 'Texto alternativo',
+      },
       //required: true,
     },
     {
       name: 'caption',
       type: 'richText',
+      label: {
+        en: 'Caption',
+        es: 'Descripción',
+      },
       editor: lexicalEditor({
         features: ({ rootFeatures }) => {
           return [...rootFeatures, FixedToolbarFeature(), InlineToolbarFeature()]
@@ -76,5 +84,15 @@ export const Media: CollectionConfig = {
         crop: 'center',
       },
     ],
+  },
+  labels: {
+    singular: {
+      en: 'Media',
+      es: 'Foto',
+    },
+    plural: {
+      en: 'Media',
+      es: 'Fotos',
+    },
   },
 }
